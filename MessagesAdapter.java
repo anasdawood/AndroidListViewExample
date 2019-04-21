@@ -36,7 +36,7 @@ public class MessagesAdapter extends ArrayAdapter<MessageEntry> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View listItem = convertView;
         if (listItem == null)
-            listItem = LayoutInflater.from(mContext).inflate(R.layout.message_list_item, parent, false);
+            listItem = LayoutInflater.from(mContext).inflate(R.layout.single_message_entry, parent, false);
 
         MessageEntry currentMessage = messagesList.get(position);
 
