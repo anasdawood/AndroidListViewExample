@@ -36,7 +36,7 @@ public class MessagesAdapter extends ArrayAdapter<MessageEntry> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View listItem = convertView;
         if (listItem == null)
-            listItem = LayoutInflater.from(mContext).inflate(R.layout.single_message_entry, parent, false);
+            listItem = LayoutInflater.from(mContext).inflate(R.layout.message_list_item, parent, false);
 
         MessageEntry currentMessage = messagesList.get(position);
 
@@ -45,9 +45,6 @@ public class MessagesAdapter extends ArrayAdapter<MessageEntry> {
 
         final TextView release = listItem.findViewById(R.id.textView_message);
         release.setText(currentMessage.getMessage());
-
-        final TextView firebaseId = listItem.findViewById(R.id.textView_fire_base_id);
-        firebaseId.setText(currentMessage.getFirbaseId());
         return listItem;
     }
 }
