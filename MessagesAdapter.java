@@ -1,4 +1,3 @@
-package com.attoon.functions;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
